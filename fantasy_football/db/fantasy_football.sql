@@ -14,7 +14,7 @@ CREATE TABLE players
   last_name VARCHAR(255) not null,
   team_id INT4 references teams(id),
   position VARCHAR(255) not null,
-  salary VARCHAR(255) not null,
+  salary INT4 not null,
   injury VARCHAR(255) not null,
   goals INT4
 )

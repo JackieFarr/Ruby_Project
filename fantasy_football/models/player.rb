@@ -56,6 +56,36 @@ class Player
     return Team.new(results.first)
   end
 
+  def update()
+    sql = "UPDATE players
+    SET
+    (first_name,
+    last_name,
+    team_id,
+    position,
+    salary,
+    injury,
+    goals)
+    = ($1, $2, $3, $4, $5, $6, $7)
+    WHERE id = $8"
+    values =
+      [@first_name,
+      @last_name,
+      @team_id,
+      @position,
+      @salary,
+      @injury,
+      @goals]
+    SqlRunner.run( sql, values )
+  end
+
+  def delete()
+    sql = "DELETE FROM players
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run( sql, values )
+  end
+
 
 
 

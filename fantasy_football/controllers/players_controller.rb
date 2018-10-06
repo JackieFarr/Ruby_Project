@@ -31,9 +31,9 @@ get ('/players/new') do
 end
 
 # CREATE PLAYER ##
-post ('/players/new') do
-  @player = Player.new(params)
-  @player.save
+post ('/players') do
+  player = Player.new(params)
+  player.save()
   redirect to ("/players")
 end
 

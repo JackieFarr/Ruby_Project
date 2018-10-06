@@ -1,0 +1,18 @@
+body {
+  background-color: #a3297a;
+  background-size: 100%;
+  font-family: 'Cairo', sans-serif;
+  color: white;
+}
+
+nav {
+  color: #a3297a;
+  background-color: white;
+  padding: 25px;
+  margin: 0px;
+  padding-right: 0px;
+}
+
+/* nav ul li {
+  margin-bottom: 15px;
+} */ */

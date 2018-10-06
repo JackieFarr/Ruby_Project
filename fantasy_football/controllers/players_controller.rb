@@ -1,10 +1,12 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
-require_relative( './models/players' )
-also_reload( './models/*' )
+require_relative( '../models/team' )
+require_relative( '../models/player' )
+also_reload( '../models/*' )
 
-## HOME LANDING PAGE ##
-get ('/') do
-  erb(:home)
+## PLAYERS LANDING PAGE ##
+get ('/players') do
+  @players = Player.all
+  erb(:"players/index")
 end

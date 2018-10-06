@@ -1,0 +1,16 @@
+.btn {
+  border: 0px;
+  border-radius: 5%;
+  padding: 6px 15px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+}
+
+.btn--action {
+  background-color: #7B0152;
+}
+
+.btn--action:hover {
+  background-color: #67003E;
+}

@@ -36,6 +36,11 @@ class Player
       @goals]
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i
+
+
+  def team_id
+    for id in @team_id
+      return @team_id.name
   end
 
   def self.all()

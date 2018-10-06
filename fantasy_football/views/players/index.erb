@@ -10,9 +10,7 @@
     <th>Last Name</th>
     <th>Team</th>
     <th>Position</th>
-    <th>Salary</th>
-    <th>Injury</th>
-    <th>Goals</th>
+
   </tr>
   <% for player in @players %>
   <tr>
@@ -20,9 +18,6 @@
       <td><%= player.last_name%></td>
       <td> <%= player.team_id %></td>
       <td> <%= player.position %></td>
-      <td> <%= player.salary %></td>
-      <td> <%= player.injury %></td>
-      <td> <%= player.goals %></td>
   </tr>
   <% end %>
 </table>

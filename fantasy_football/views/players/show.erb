@@ -1,1 +1,12 @@
+<h1>Player <%= @player.first_name @player.last_name  %></h1>
 
+<p>Team: <%= Player.team %></p>
+<p>Position: <%= Player.position %></p>
+<p>Salary <%= Player.salary %></p>
+<p>Injury <%= Player.injury %></p>
+<p>Goals <%= Player.goals %></p>
+
+<p> <a href="/players<%= @player.id %> /delete">
+<input type="submit" value="Delete player">
+</a>
+</p>

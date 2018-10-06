@@ -1,5 +1,5 @@
-/* input[type="submit"] {
-  font-family: sans-serif;
+input[type="submit"] {
+  font-family: 'Cairo', sans-serif;
 }
 
 select {
@@ -8,4 +8,4 @@ select {
   margin: 15px 0;
   font-family: sans-serif;
   display: block;
-} */
+}

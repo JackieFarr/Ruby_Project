@@ -1,0 +1,48 @@
+<form method="post" action="/players/:id/update/<%= @player.id %>">
+  <label for="first-name-field">First Name:</label>
+  <input
+  type="text"
+  name="first_name"
+  id="first-name-field"
+  value="<%= @player.first_name %>"
+  />
+
+  <label for="last-name-field">Last Name:</label>
+  <input
+  type="text"
+  name="last_name"
+  id="last-name-field"
+  value="<%= @player.last_name %>"
+  />
+
+  <label for="team-selection">Select a team:</label>
+  <select name="team" id="team-selection">
+    <option
+    value="Manchester City"
+    <%= "selected" if @player.team == "Manchester City" %>
+    >Manchester City</option>
+    <option
+    value="Tottenham Hotspur"
+    <%= "selected" if @player.team == "Tottenham Hospur" %>
+    >Tottenham Hotspur</option>
+  </select>
+
+  <label for="position-field">Position:</label>
+  <input
+  type="number"
+  name="position"
+  id="position-field"
+  value="<%= @player.position() %>"
+  />
+
+  <label for="salary-field">Salary</label>
+  <input type="number" name="Salary" id="salary-field" value="<%=@player.salary%>">
+
+  <label for="injury-selection">Injury</label>
+  <input type="text" name="Injury" id="injury-selection" value="<%= @player.salary %>">
+
+  <label for="goals-field">Goals Scored</label>
+  <input type="number" name="Goals Scored" id="goals-selection" value="<%=@player.goals%>">
+
+  <input type='submit' value="Update Player">
+</form>

@@ -38,7 +38,7 @@ class Player
     @id = results.first()["id"].to_i
 
 
-  def team_id
+  def team_name
     for id in @team_id
       return @team_id.name
   end
@@ -91,7 +91,14 @@ class Player
     SqlRunner.run( sql, values )
   end
 
-
+  def self.find(id)
+    sql = "SELECT * FROM players
+    WHERE id = $1"
+    values = [id]
+    player = SqlRunner.run(sql, values)
+    result = Player.new(player.first)
+    return result
+  end
 
 
 end

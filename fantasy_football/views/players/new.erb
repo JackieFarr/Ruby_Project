@@ -1,0 +1,56 @@
+<form method="POST" action="/players">
+
+  <label for="first-name-field">First name:</label>
+  <input type="text" name="first_name" id="first-name-field"/>
+
+  <label for="last-name-field">Last name:</label>
+  <input type="text" name="last_name" id="last-name-field"/>
+
+  <label for="Team">Choose the team:</label>
+  <select name="team" id="team-select">
+    <option value="Manchester City">Manchester City</option>
+    <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+    <option value="Chelsea">Chelsea</option>
+    <option value="Watford">Watford</option>
+  </select>
+
+  <label for="Position">Choose the position:</label>
+  <select name="position" id="position-select">
+    <option value="Goalkeeper">Goalkeeper</option>
+    <option value="Defender">Defender</option>
+    <option value="Midfielder">Midfielder</option>
+    <option value="Forward">Forward</option>
+  </select>
+
+  <label for="Salary">Salary:</label>
+  <input
+  type="number"
+  name="salary"
+  min="1"
+  max="1000000000"
+  id="salary-field"/>
+
+  <label for="Injury">Is the player injured?</label>
+  <select
+  name="injury"
+  id="injury-select">
+    <option
+    value="Yes"></option>
+    <option
+    value="No"></option>
+  </select>
+
+  <label for="Goals">Goals scored</label>
+  <input
+  type="number"
+  name="Goals"
+  min="0"
+  max="500"
+  id="goals-field"/>
+
+  <input
+  type="submit"
+  value="Add player"/>
+
+
+</form>

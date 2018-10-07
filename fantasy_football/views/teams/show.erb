@@ -1,0 +1,19 @@
+<h1>Teams <%= @team.name @team.player_id%></h1>
+
+<p>Team: <%= Team.name %></p>
+<p>Players: <%= Team.players %></p>
+
+
+
+
+
+<p>
+  <a href="/teams/show<%= @team.id %>/edit">Edit Team
+  </a>
+</p>
+
+<form method="post" action="/teams/:id<%= @Team.id %>/delete">
+
+  <input type="submit" value="Delete Team"/>
+
+</form>

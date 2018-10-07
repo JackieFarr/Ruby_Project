@@ -16,6 +16,10 @@ class Player
     @goals = options["goals"]
   end
 
+  def pretty_name
+    return "#{@first_name} #{@last_name}"
+  end
+
   def save()
     sql = "INSERT INTO players
     (first_name,
@@ -36,11 +40,12 @@ class Player
       @goals]
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i
-
+  end
 
   def team_name
     for id in @team_id
       return @team_id.name
+    end
   end
 
   def self.all()
@@ -99,6 +104,5 @@ class Player
     result = Player.new(player.first)
     return result
   end
-
 
 end

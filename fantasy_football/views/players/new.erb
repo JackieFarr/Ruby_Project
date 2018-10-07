@@ -1,53 +1,66 @@
-<form method="POST" action="/players">
+<form method="post" action="/players">
 
   <label for="first-name-field">First name:</label>
-  
   <input type="text" name="first_name" id="first-name-field"/>
+
+  <br>
+  <br>
 
   <label for="last-name-field">Last name:</label>
   <input type="text" name="last_name" id="last-name-field"/>
 
-  <label for="Team">Choose the team:</label>
-  <select name="team" id="team-select">
+  <br>
+  <br>
+
+  <label>Choose the team:</label>
+  <select name="team.name">
     <option value="Manchester City">Manchester City</option>
     <option value="Tottenham Hotspur">Tottenham Hotspur</option>
     <option value="Chelsea">Chelsea</option>
     <option value="Watford">Watford</option>
   </select>
 
-  <label for="Position">Choose the position:</label>
-  <select name="position" id="position-select">
+  <br>
+
+  <label>Choose the position:</label>
+  <select name="position">
     <option value="Goalkeeper">Goalkeeper</option>
     <option value="Defender">Defender</option>
     <option value="Midfielder">Midfielder</option>
     <option value="Forward">Forward</option>
   </select>
 
-  <label for="Salary">Salary:</label>
+  <br>
+
+  <label>Salary:</label>
   <input
   type="number"
   name="salary"
   min="1"
   max="1000000000"
-  id="salary-field"/>
+  />
 
-  <label for="Injury">Is the player injured?</label>
-  <select
-  name="injury"
-  id="injury-select">
-    <option
-    value="Yes">Yes</option>
-    <option
-    value="No">No</option>
+  <br>
+  <br>
+
+  <label>Is the player injured?</label>
+  <select name="injury">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
   </select>
 
-  <label for="Goals">Goals scored</label>
+<br>
+
+  <label>Goals scored</label>
   <input
   type="number"
   name="Goals"
   min="0"
   max="500"
-  id="goals-field"/>
+  />
+
+  <br>
+  <br>
 
   <input
   type="submit"

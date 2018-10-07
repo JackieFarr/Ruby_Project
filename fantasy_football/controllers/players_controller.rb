@@ -7,7 +7,7 @@ also_reload( '../models/*' )
 
 ## PLAYERS LANDING PAGE ##
 get ('/players') do
-  @players = Player.all
+  @players = Player.all()
   erb(:"players/index")
 end
 
@@ -18,27 +18,27 @@ end
 
 # CREATE PLAYER ##
 post ('/players') do
-  player = Player.new(params)
-  player.save()
-  redirect to ("/players")
+  @player = Player.new(params)
+  @player.save()
+  erb(:"players/create")
+  # redirect to ("/players")
 end
 
-## SHOW PLAYER DETAILS ##
-# get ('/players/:id') do
-#   @player = Player.find(params[:id])
-#   erb(:"players/show")
-# end
+# UPDATE PLAYER DETAILS ##
+post ('/players/:id') do
+  Player.new(params).update
+  redirect to 'players'
+end
 
-
-# UPDATE PLAYER ##
-# post ('/players/:id/update') do
-#   @player = Player.new(params)
-#   @player.update()
-#   redirect to ('/players')
-# end
+## EDIT PLAYER DETAILS - SHOWS FORM OF DETAILS ##
+get ('/players/:id/edit') do
+  @player = Player.find(params[:id])
+  erb (:"players/edit")
+end
 
 ## DELETE PLAYER ##
-# post ('/players/:id/delete') do
-#   Player.destroy(params[:id])
-#   redirect to ("/players")
-# end
+post ('/players/:id/delete') do
+  player = Player.find(params[:id])
+  player.delete
+  redirect to ("/players")
+end

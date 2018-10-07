@@ -28,10 +28,13 @@ class Team
   end
 
   def players
-    sql = "SELECT * from players WHERE id = $1"
-    values = [@player_id]
+    sql = "SELECT * FROM players
+    INNER JOIN teams
+    ON players.team_id = team.id
+    WHERE team_id = $1"
+    values = [@id]
     results = SqlRunner.run(sql, values)
-    return Player.new(results.first)
+    return results.map {|player| Player.new(player)}
   end
 
   def update
@@ -45,7 +48,17 @@ class Team
     sql = "DELETE FROM teams
     WHERE id = $1"
     values = [@id]
-    SqlRunner.run( sql, values )
+    SqlRunner.run(sql, values)
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM teams
+    WHERE id = $1"
+    values = [id]
+    team = SqlRunner.run(sql, values)
+    result = Team.new(team.first)
+    return result
+  end
+
 
 end

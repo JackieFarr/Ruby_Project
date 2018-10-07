@@ -7,10 +7,17 @@
 <table>
   <tr>
     <th>Team name</th>
+    <th>Team Players</th>
   </tr>
-  <% for team in @teams %>
+    <% for team in @teams %>
   <tr>
-      <td><%= team.name%></td>
+    <td><%= team.name%></td>
+    <td><%= team.players %></td>
   </tr>
   <% end %>
 </table>
+
+
+<!-- <tr>
+  <td><%=a href="/teams/<%= team.id %>">View Team Details</a> %></td> -->
+<!-- </tr> -->

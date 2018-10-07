@@ -1,12 +1,12 @@
 body {
-  background-color: #a3297a;
+  background-color: #613277;
   background-size: 100%;
   font-family: 'Cairo', sans-serif;
   color: white;
 }
 
 nav {
-  color: #a3297a;
+  color: ##613277;
   background-color: white;
   padding: 25px;
   margin: 0px;
@@ -15,4 +15,4 @@ nav {
 
 /* nav ul li {
   margin-bottom: 15px;
-} */ */
+} */ 

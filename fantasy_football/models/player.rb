@@ -42,11 +42,11 @@ class Player
     @id = results.first()["id"].to_i
   end
 
-  def team_name
-    for id in @team_id
-      return @team_id.name
-    end
-  end
+  # def team_name
+  #   for id in @team_id
+  #     return @team_id.name
+  #   end
+  # end
 
   def self.all()
     sql = "SELECT * FROM players"
@@ -60,7 +60,7 @@ class Player
   end
 
   def team
-    sql = "SELECT * FROM team WHERE id = $1"
+    sql = "SELECT * FROM teams WHERE id = $1"
     values = [@team_id]
     results = SqlRunner.run(sql, values)
     return Team.new(results.first)

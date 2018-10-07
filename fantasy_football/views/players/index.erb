@@ -10,13 +10,17 @@
     <th>Last Name</th>
     <th>Team</th>
     <th>Position</th>
+    <th>Details</th>
   </tr>
   <% for player in @players %>
   <tr>
-      <td><%= player.first_name %></td>
-      <td><%= player.last_name %></td>
-      <td><%= player.team_id %></td>
-      <td><%= player.position %></td>
+    <td><%= player.first_name %></td>
+    <td><%= player.last_name %></td>
+    <td><%= player.team_id %></td>
+    <td><%= player.position %></td>
+    <td> <p class="btn-wrapper">
+         <a class="btn btn--action" href="/players/<%= player.id %>">Show player details</a></p></td>
   </tr>
+
   <% end %>
 </table>

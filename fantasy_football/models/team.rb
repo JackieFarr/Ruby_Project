@@ -30,7 +30,7 @@ class Team
   def players
     sql = "SELECT * FROM players
     INNER JOIN teams
-    ON players.team_id = team.id
+    ON players.team_id = teams.id
     WHERE team_id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)

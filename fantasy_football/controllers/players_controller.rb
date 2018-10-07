@@ -16,12 +16,18 @@ get ('/players/new') do
   erb(:"players/new")
 end
 
-# CREATE PLAYER ##
+## CREATE PLAYER ##
 post ('/players') do
   @player = Player.new(params)
   @player.save()
   erb(:"players/create")
   # redirect to ("/players")
+end
+
+## SHOW INDIV PLAYER DETAILS ##
+get ('/players/:id') do
+  @player = Player.find(params[:id].to_i)
+  erb (:"players/show")
 end
 
 # UPDATE PLAYER DETAILS ##
@@ -32,7 +38,7 @@ end
 
 ## EDIT PLAYER DETAILS - SHOWS FORM OF DETAILS ##
 get ('/players/:id/edit') do
-  @player = Player.find(params[:id])
+  @player = Player.find(params[:id].to_i)
   erb (:"players/edit")
 end
 

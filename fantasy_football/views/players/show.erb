@@ -1,14 +1,12 @@
 
-<p><a href="/players/<%= @player.id %>/edit">Edit Player</a></p>
 
-<!-- <p>Name: <%= @player.first_name %></p> -->
-<p>Team:<%= @player.team %></p>
+<p>Team:<%= @player.team.name %></p>
 <p>Position:<%= @player.position %></p>
-<p>Salary<%= @player.salary %></p>
-<p>Injury<%= @player.injury %></p>
-<p>Goals<%= @player.goals %></p>
+<p>Salary:<%= @player.salary %></p>
+<p>Injury:<%= @player.injury %></p>
+<p>Goals:<%= @player.goals %></p>
 
 
-<form method="post" action="/players/<%= @player.id %>/delete">
-  <input type="submit" value="Delete Player"/>
-</form>
+<p><a class="btn btn--action" href="/players/<%= @player.id %>/edit">Edit Player</a></p>
+
+<p><a class="btn btn--action" href="/players/<%= @player.id %>/delete">Delete Player</a></p>

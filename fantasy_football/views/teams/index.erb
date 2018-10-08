@@ -6,18 +6,14 @@
 
 <table>
   <tr>
-    <th>Team name</th>
+    <th>Team Name</th>
     <th>Team Players</th>
   </tr>
     <% for team in @teams %>
   <tr>
-    <td><%= team.name%></td>
-    <!-- <td><%= team.players %></td> -->
+    <td><%= team.name %></td>
+    <td> <p class="btn--wrapper">
+         <a class="btn btn--action" href="/teams/<%= teams.id %>">Show team players</a></p></td>
   </tr>
   <% end %>
 </table>
-
-
-<!-- <tr>
-  <td><%=a href="/teams/<%= team.id %>">View Team Details</a> %></td> -->
-<!-- </tr> -->

@@ -12,13 +12,13 @@
   <br>
   <br>
 
-  <label>Choose the team:</label>
-  <select name="team.name">
-    <option value="Manchester City">Manchester City</option>
-    <option value="Tottenham Hotspur">Tottenham Hotspur</option>
-    <option value="Chelsea">Chelsea</option>
-    <option value="Watford">Watford</option>
-  </select>
+  <label>Choose the team:
+    <select name="team_id">
+      <% for team in @teams %>
+      <option value="<%= team.id %>"><%= team.name %></option>
+      <% end %>
+    </select>
+  </label>
 
   <br>
 
@@ -54,7 +54,7 @@
   <label>Goals scored</label>
   <input
   type="number"
-  name="Goals"
+  name="goals"
   min="0"
   max="500"
   />

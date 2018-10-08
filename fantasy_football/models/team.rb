@@ -39,8 +39,8 @@ class Team
 
   def update
     sql = "UPDATE teams
-    SET (name) = ($1) WHERE id = ($2)"
-    values = @name
+    SET (name) = ($1) WHERE id = $2"
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 

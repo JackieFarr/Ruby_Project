@@ -1,20 +1,9 @@
-<!-- <head><link rel="stylesheet" href="/main.css"></head>
-<body class="edit">
-<h1>Player: <%= @player.id %></h1>
-<hr/>
-<p> Name: <%= @player.pretty_name %> </p>
-<br>
-<p>Position: <%= @player.position %> </p>
-<br>
-<br>
-<hr/> -->
 
 <form method="post" action="/players/<%= @player.id %>">
   <label for="first-name-field">First Name:</label>
   <input
   type="text"
   name="first_name"
-  id="first-name-field"
   value="<%= @player.first_name %>"
   />
 
@@ -25,57 +14,40 @@
   <input
   type="text"
   name="last_name"
-  id="last-name-field"
   value="<%= @player.last_name %>"
   />
 
 <br>
 <br>
 
-  <label for="team-selection">Update the player's team:</label>
-  <select name="team" id="team-selection">
-    <option
-    value="Manchester City"
-    <%= "selected" if @player.team == "Manchester City" %>
-    >Manchester City
-    </option>
-    <option
-    value="Tottenham Hotspur"
-    <%= "selected" if @player.team == "Tottenham Hotspur" %>
-    >Tottenham Hotspur
-    </option>
-    <option
-    value="Chelsea"
-    <%= "selected" if @player.team == "Chelsea" %>
-    >Chelsea
-    </option>
-    <option
-    value="Watford"
-    <%= "selected" if @player.team == "Watford" %>
-    >Watford
-    </option>
+<label>Update the team:
+  <select name="team_id">
+    <% for team in @teams %>
+    <option value="<%= team.id %>"><%= team.name %></option>
+    <% end %>
   </select>
+</label>
 
-  <label for="position-selection">Update the player's position:</label>
-  <select name="position" id="position-selection">
+<label for="position-selection">Update the player's position:</label>
+  <select name="position">
     <option
     value="Goalkeeper"
-    <%= "selected" if @player.position == "Goalkeeper" %>Goalkeeper
+    <%= "selected" if @player.position == "Goalkeeper" %>>Goalkeeper
     </option>
 
     <option
     value="Defender"
-    <%= "selected" if @player.position == "Defender" %>Defender
+    <%= "selected" if @player.position == "Defender" %>>Defender
     </option>
 
     <option
     value="Midfielder"
-    <%= "selected" if @player.position == "Midfielder" %>Midfielder
+    <%= "selected" if @player.position == "Midfielder" %>>Midfielder
     </option>
 
     <option
     value="Forward"
-    <%= "selected" if @player.position == "Forward" %>Forward
+    <%= "selected" if @player.position == "Forward" %>>Forward
     </option>
 
   </select>
@@ -83,8 +55,7 @@
   <label for="salary-field">Salary:</label>
   <input
   type="number"
-  name="quantity"
-  id="salary-field"
+  name="salary"
   value="<%= @player.salary() %>"
   />
 
@@ -92,24 +63,28 @@
   <br>
 
   <label for="injury-selection">Injury:</label>
-  <select name="injury" id="injury-selection">
+  <select name="injury">
     <option
     value="Yes"
-    <%= "selected" if @player.injury == "Yes" %>Yes
+    <%= "selected" if @player.injury == "Yes" %>>Yes
     </option>
 
     <option
     value="no"
-    <%= "selected" if @player.injury == "No" %>No
+    <%= "selected" if @player.injury == "No" %>>No
     </option>
+
+    <br>
 
     <label for="goals-field">Goals Scored:</label>
     <input
     type="number"
     name="goals"
-    id="goals-field"
     value="<%= @player.goals() %>"
     />
 
-  <input type='submit' value="Edit Player">
+<br>
+<br>
+
+  <input class="btn btn--action" type='submit' value="Update Player">
 </form>

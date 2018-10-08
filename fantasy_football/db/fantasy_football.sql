@@ -10,11 +10,11 @@ CREATE TABLE teams
 CREATE TABLE players
 (
   id SERIAL4 PRIMARY KEY,
-  first_name VARCHAR(255) not null,
-  last_name VARCHAR(255) not null,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   team_id INT4 references teams(id),
-  position VARCHAR(255) not null,
+  position VARCHAR(255),
   salary INT4 not null,
-  injury VARCHAR(255) not null,
+  injury VARCHAR(255),
   goals INT4
 )

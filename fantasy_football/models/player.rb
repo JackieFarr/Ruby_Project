@@ -37,7 +37,8 @@ class Player
       @position,
       @salary,
       @injury,
-      @goals]
+      @goals
+      ]
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i
   end
@@ -79,13 +80,16 @@ class Player
     = ($1, $2, $3, $4, $5, $6, $7)
     WHERE id = $8"
     values =
-      [@first_name,
-      @last_name,
-      @team_id,
-      @position,
-      @salary,
-      @injury,
-      @goals]
+      [
+        @first_name,
+        @last_name,
+        @team_id,
+        @position,
+        @salary,
+        @injury,
+        @goals,
+        @id
+    ]
     SqlRunner.run( sql, values )
   end
 

@@ -7,12 +7,17 @@ body {
 
 nav {
   color: ##613277;
+  text-align: center;
   background-color: white;
   padding: 25px;
   margin: 0px;
   padding-right: 0px;
 }
+.nav-logo {
+  height: 30%;
+  width: 30%;
+}
 
 /* nav ul li {
   margin-bottom: 15px;
-} */ 
+} */

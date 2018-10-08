@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-  <head>
     <meta charset="utf-8">
     <title>Fantasy Football</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-  </head>
+<head>
+  <img class="nav-logo" src="images/FANTASY_FOOTBALL_LOGO.png">
+</head>
 
   <body>
+
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <link rel="stylesheet" type="text/css" href="/styles/tables.css">
     <link rel="stylesheet" type="text/css" href="/styles/badges.css">
     <link rel="stylesheet" type="text/css" href="/styles/forms.css">
     <nav>
       <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
         <li>
           <a href="/players">Players</a>
         </li>
@@ -24,9 +28,8 @@
     </nav>
     <%= yield %>
   </body>
-
   <footer>
-    <!-- <img src="images/footer_photo.png" alt="image"> -->
+
   </footer>
 
 </html>

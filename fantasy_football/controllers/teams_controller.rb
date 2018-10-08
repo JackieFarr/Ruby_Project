@@ -19,9 +19,8 @@ end
 
 ## SHOW INDIV TEAM DETAILS ##
 get ('/teams/:id') do
-  # @players = Player.all()
-  @players = Player.all
-  @team = Team.find(params[:id].to_i)
+  @teams = Team.find(params[:id].to_i)
+  @players = Player.find(@teams.id)
   # @team.players
   erb (:"teams/show")
 end
@@ -50,7 +49,7 @@ end
 ## DELETE TEAM ##
 post ('/teams/:id/delete') do
   @team = Team.find(params[:id])
-  @team.delete
+  team.delete
   erb (:"teams/delete")
-  # redirect to ("/teams")
+  redirect to ("/teams")
 end

@@ -26,7 +26,9 @@ end
 
 ## SHOW INDIV TEAM DETAILS ##
 get ('/teams/:id') do
+  # @players = Player.all()
   @team = Team.find(params[:id].to_i)
+  # @team.players
   erb (:"teams/show")
 end
 

@@ -13,7 +13,7 @@ end
 
 ## NEW.ERB - NEW PLAYER FORM ##
 get ('/players/new') do
-  # @player = Player.new
+  @players = Player.all
   @teams = Team.all
   erb(:"players/new")
 end
@@ -49,6 +49,6 @@ end
 ## DELETE.ERB -  DELETE PLAYER ##
 post ('/players/:id/delete') do
   @player = Player.find(params[:id])
-  @player.delete
+  player.delete
   erb (:"players/delete")
 end

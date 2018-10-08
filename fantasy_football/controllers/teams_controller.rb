@@ -13,6 +13,7 @@ end
 #
 ## NEW TEAM FORM ##
 get ('/teams/new') do
+  @teams = Team.all 
   erb(:"teams/new")
 end
 

@@ -1,10 +1,22 @@
 
-<p><a href="/teams/<%= @team.id %>/edit">Edit Team</a></p>
+
+<p>Team: <%= @team.name %></p>
+<p>Players:</p>
+
+  <select name="team.players">
+    <% for team.players in @teams %>
+    <option value="<%= team.players %>"><%= team.players %></option>
+    <% end %>
+  </select>
+</label>
 
 
-<p>Team:<%= @team.name %></p>
-<p>Players:<%= @team.players %></p>
+<%= @team.players %></p>
 
-<form method="post" action="/teams/<%= @team.id %>/delete">
-  <input type="submit" value="Delete Team"/>
+
+<p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team</a></p>
+
+
+<form class="btn btn--action" method="post" action="/teams/<%= @team.id %>/delete">
+  <input type="submit" value="delete team"/>
 </form>

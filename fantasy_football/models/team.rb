@@ -28,7 +28,7 @@ class Team
   end
 
   def players
-    sql = "SELECT * FROM players
+    sql = "SELECT first_name, last_name FROM players
     INNER JOIN teams
     ON players.team_id = teams.id
     WHERE team_id = $1"
@@ -39,7 +39,9 @@ class Team
 
   def update
     sql = "UPDATE teams
-    SET (name) = ($1) WHERE id = $2"
+    SET name = $1
+    WHERE id = $2"
+    # binding.pry
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end

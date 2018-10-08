@@ -13,8 +13,17 @@ end
 #
 ## NEW TEAM FORM ##
 get ('/teams/new') do
-  @teams = Team.all 
+  @teams = Team.all
   erb(:"teams/new")
+end
+
+## SHOW INDIV TEAM DETAILS ##
+get ('/teams/:id') do
+  # @players = Player.all()
+  @players = Player.all
+  @team = Team.find(params[:id].to_i)
+  # @team.players
+  erb (:"teams/show")
 end
 
 ## CREATE TEAM ##
@@ -25,12 +34,11 @@ post ('/teams') do
   # redirect to ("/teams")
 end
 
-## SHOW INDIV TEAM DETAILS ##
-get ('/teams/:id') do
-  # @players = Player.all()
+## EDIT TEAM DETAILS - SHOWS FORM OF DETAILS ##
+get ('/teams/:id/edit') do
+  @teams = Team.all
   @team = Team.find(params[:id].to_i)
-  # @team.players
-  erb (:"teams/show")
+  erb (:"teams/edit")
 end
 
 ## UPDATE TEAM DETAILS ##
@@ -39,15 +47,10 @@ post ('/teams/:id') do
   redirect to 'teams'
 end
 
-## EDIT TEAM DETAILS - SHOWS FORM OF DETAILS ##
-get ('/teams/:id/edit') do
-  @team = Team.find(params[:id].to_i)
-  erb (:"teams/edit")
-end
-
 ## DELETE TEAM ##
 post ('/teams/:id/delete') do
-  team = Team.find(params[:id])
-  team.delete
-  redirect to ("/teams")
+  @team = Team.find(params[:id])
+  @team.delete
+  erb (:"teams/delete")
+  # redirect to ("/teams")
 end

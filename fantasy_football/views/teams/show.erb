@@ -2,19 +2,13 @@
 <h1>Team: <%= @team.name %></h1>
 
 
-<ul>
-  <!-- loop through @team.players -->
+<ul class="hover-ul">
   <% for players in @team.players %>
 
     <li> <%= players.pretty_name %> </li>
 
 <% end %>
 </ul>
-  <!-- end of loop -->
 
 
 <p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a></p>
-
-<form class="btn btn--action" method="post" action="/teams/<%= @team.id %>/delete">
-  <input type="submit" value="Delete Team"/>
-</form>

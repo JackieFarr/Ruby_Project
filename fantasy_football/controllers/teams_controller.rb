@@ -50,7 +50,6 @@ end
 ## DELETE TEAM ##
 post ('/teams/:id/delete') do
   @team = Team.find(params[:id])
-  team.delete
+  @team.delete
   erb (:"teams/delete")
-  redirect to ("/teams")
 end

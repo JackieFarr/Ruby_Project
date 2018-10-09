@@ -46,12 +46,13 @@ class Team
     SqlRunner.run(sql, values)
   end
 
-  def delete()
-    sql = "DELETE FROM teams
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
-  end
+## TEAMS WON'T BE DELETED ##
+  # def delete()
+  #   sql = "DELETE FROM teams
+  #   WHERE id = $1"
+  #   values = [@id]
+  #   SqlRunner.run(sql, values)
+  # end
 
   def self.find(id)
     sql = "SELECT * FROM teams

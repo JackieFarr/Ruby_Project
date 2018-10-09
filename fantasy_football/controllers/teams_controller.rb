@@ -19,9 +19,10 @@ end
 
 ## SHOW INDIV TEAM DETAILS ##
 get ('/teams/:id') do
-  @teams = Team.find(params[:id].to_i)
-  @players = Player.find(@teams.id)
-  # @team.players
+  # @teams = Team.all
+  @team = Team.find(params[:id].to_i)
+  @players = Player.all
+  @teams = Team.all
   erb (:"teams/show")
 end
 

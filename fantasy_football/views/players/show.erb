@@ -1,14 +1,16 @@
 
-
+<h1>Name: <%= @player.pretty_name %></h1>
 <p>Team: <%= @player.team.name %></p>
 <p>Position: <%= @player.position %></p>
-<p>Salary: <%= @player.salary %></p>
+<p>Salary: £<%= @player.salary %> Million</p>
 <p>Injury: <%= @player.injury %></p>
 <p>Goals: <%= @player.goals %></p>
 
 
 <p><a class="btn btn--action" href="/players/<%= @player.id %>/edit">Edit Player</a></p>
 
+<p><a class="btn btn--action" href="/players">Back to Players</a></p>
+
 <form class="btn btn--action" action="/players/<%= @player.id %>/delete" method="post">
-  <input type="submit" value="delete player">
+  <input type="submit" value="Delete Player">
 </form>

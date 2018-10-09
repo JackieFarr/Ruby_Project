@@ -1,16 +1,20 @@
 
-
-<p>Team: <%= @teams.name %></p>
-<p>Players:</p>
-
-<!-- # <% for player in @players %>
-# <p><%= player.first_name %></p>
-# <% end %> -->
+<h1>Team: <%= @team.name %></h1>
 
 
-<p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team</a></p>
+<ul>
+  <!-- loop through @team.players -->
+  <% for players in @team.players %>
+
+    <li> <%= players.pretty_name %> </li>
+
+<% end %>
+</ul>
+  <!-- end of loop -->
 
 
-<form class="btn btn--action" method="post" action="/teams/<%= @teams.id %>/delete">
-  <input type="submit" value="delete team"/>
+<p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a></p>
+
+<form class="btn btn--action" method="post" action="/teams/<%= @team.id %>/delete">
+  <input type="submit" value="Delete Team"/>
 </form>

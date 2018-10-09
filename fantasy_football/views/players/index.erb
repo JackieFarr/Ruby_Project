@@ -1,10 +1,10 @@
-<h1>These are the players</h1>
+<h1>Players</h1>
 
 <p class="btn--wrapper">
   <a class="btn btn--action" href="/players/new">Add a player</a>
 </p>
 
-<table>
+<table align="center">
   <tr>
     <th>First name</th>
     <th>Last Name</th>
@@ -16,7 +16,7 @@
   <tr>
     <td><%= player.first_name %></td>
     <td><%= player.last_name %></td>
-    <td><%= player.team_id %></td>
+    <td><%= player.team.name %></td>
     <td><%= player.position %></td>
     <td> <p class="btn-wrapper">
          <a class="btn btn--action" href="/players/<%= player.id %>">Show player details</a></p></td>

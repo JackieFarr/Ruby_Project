@@ -4,6 +4,7 @@ border: 5px solid #7EB2DD;
 border-spacing: 5px;
 border-collapse: collapse;
 text-align: center;
+color: white;
 }
 
 table.center {

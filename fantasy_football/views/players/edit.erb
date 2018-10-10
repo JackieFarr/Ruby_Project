@@ -1,91 +1,136 @@
-<form method="post" action="/players/<%= @player.id %>">
-
-  <label for="first-name-field">First Name:</label>
-  <input
-  type="text"
-  name="first_name"
-  value="<%= @player.first_name %>"
-  />
-
-  <br>
-  <br>
-
-  <label for="last-name-field">Last Name:</label>
-  <input
-  type="text"
-  name="last_name"
-  value="<%= @player.last_name %>"
-  />
-
 <br>
 <br>
+<br>
+<div class="container">
+  <form method="post" action="/players/<%= @player.id %>">
 
-<label>Update the team:
-  <select name="team_id">
-    <% for team in @teams %>
-    <option value="<%= team.id %>"><%= team.name %></option>
-    <% end %>
-  </select>
-</label>
-
-<label for="position-selection">Update the player's position:</label>
-  <select name="position">
-    <option
-    value="Goalkeeper"
-    <%= "selected" if @player.position == "Goalkeeper" %>>Goalkeeper
-    </option>
-
-    <option
-    value="Defender"
-    <%= "selected" if @player.position == "Defender" %>>Defender
-    </option>
-
-    <option
-    value="Midfielder"
-    <%= "selected" if @player.position == "Midfielder" %>>Midfielder
-    </option>
-
-    <option
-    value="Forward"
-    <%= "selected" if @player.position == "Forward" %>>Forward
-    </option>
-
-  </select>
-
-  <label for="salary-field">Salary:</label>
-  £<input
-  type="number"
-  name="salary"
-  value="<%= @player.salary() %>"
-  /> Million
-
+    <div class="row">
+      <div class="col-25">
+        <label for="first-name-field">First Name:</label>
+      </div>
+        <div class="col-75">
+          <input
+          type="text"
+          name="first_name"
+          value="<%= @player.first_name %>"
+          />
+        </div>
+      </div>
 
   <br>
-  <br>
 
-  <label for="injury-selection">Injury:</label>
-  <select name="injury">
-    <option
-    value="Yes"
-    <%= "selected" if @player.injury == "Yes" %>>Yes
-    </option>
+  <div class="row">
+    <div class="col-25">
+      <label for="last-name-field">Last Name:</label>
+    </div>
+    <div class="col-75">
+      <input
+      type="text"
+      name="last_name"
+      value="<%= @player.last_name %>"
+      />
+    </div>
+  </div>
 
-    <option
-    value="no"
-    <%= "selected" if @player.injury == "No" %>>No
-    </option>
+<br>
 
-    <br>
+<div class="row">
+  <div class="col-25">
+    <label>Update the team:
+    </div>
+    <div class="col-75">
+      <select name="team_id">
+        <% for team in @teams %>
+        <option value="<%= team.id %>"><%= team.name %></option>
+        <% end %>
+      </select>
+      </label>
+    </div>
+</div>
 
-    <label for="goals-field">Goals Scored:</label>
-    <input
+<div class="row">
+  <div class="col-25">
+    <label for="position-selection">Update the player's position:</label>
+    </div>
+    <div class="col-75">
+      <select name="position">
+        <option
+        value="Goalkeeper"
+        <%= "selected" if @player.position == "Goalkeeper" %>>Goalkeeper
+        </option>
+
+        <option
+        value="Defender"
+        <%= "selected" if @player.position == "Defender" %>>Defender
+        </option>
+
+        <option
+        value="Midfielder"
+        <%= "selected" if @player.position == "Midfielder" %>>Midfielder
+        </option>
+
+        <option
+        value="Forward"
+        <%= "selected" if @player.position == "Forward" %>>Forward
+        </option>
+
+      </select>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+    <label for="salary-field">Salary:</label>
+  </div>
+  <div class="col-75">
+    £<input
     type="number"
-    name="goals"
-    value="<%= @player.goals() %>"
-    />
+    name="salary"
+    value="<%= @player.salary() %>"
+    /> Million
+  </div>
+</div>
 
+  <br>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="injury-selection">Injury:</label>
+    </div>
+      <div class="col-75">
+        <select name="injury">
+
+          <option
+          value="Yes"
+          <%= "selected" if @player.injury == "Yes" %>>Yes
+          </option>
+
+          <option
+          value="no"
+          <%= "selected" if @player.injury == "No" %>>No
+          </option>
+
+    </div>
+  </div>
+</select>
 <br>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="goals-field">Goals Scored:</label>
+      </div>
+        <div class="col-75">
+          <input
+            type="number"
+            name="goals"
+            value="<%= @player.goals() %>"
+            />
+        </div>
+  </div>
+
 <br>
 
   <input class="btn btn--action" type='submit' value="Update Player">
 </form>
+
+</div>

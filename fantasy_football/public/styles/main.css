@@ -1,4 +1,5 @@
 body {
+
   background-color: #613277;
   background-size: 100%;
   font-family: 'Cairo', sans-serif;
@@ -7,6 +8,8 @@ body {
 
 .list {
   background-color: #ef7d3b;
+  text-align: center;
+  display: grid;
 }
 
 ul {

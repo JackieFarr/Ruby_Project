@@ -5,6 +5,7 @@
   color: white;
   cursor: pointer;
   font-family: 'Cairo', sans-serif;
+  font-size: 15px;
 }
 
 .btn--action {

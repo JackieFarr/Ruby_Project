@@ -49,6 +49,6 @@ end
 ## DELETE.ERB -  DELETE PLAYER ##
 post ('/players/:id/delete') do
   @player = Player.find(params[:id])
-  player.delete
+  @player.delete
   erb (:"players/delete")
 end

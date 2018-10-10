@@ -10,8 +10,20 @@
 
 .btn--action {
   background-color: #3c1e49;
+  font-size: 25px;
 }
 
 .btn--action:hover {
-  background-color: #ef7d3b;
+  background-color: #C71585;
+}
+
+
+.btn--action_2 {
+  background-color: #3c1e49;
+  font-size: 15px;
+}
+
+.btn--action_2:hover {
+  background-color: #C71585;
+  font-size: 15px;
 }

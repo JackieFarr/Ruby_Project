@@ -1,16 +1,27 @@
 
 table {
-border: 5px solid #7EB2DD;
-border-spacing: 5px;
-border-collapse: collapse;
-text-align: center;
-color: white;
+  background-color: #7A004D;
+  border: 5px solid white;
+  border-spacing: 5px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  line-height: 4px;
+}
+
+th {
+  background-color: #3c1e49;
 }
 
 table.center {
   margin-left: auto;
   margin-right: auto;
 }
+
+tr:nth-child(even){background-color: #A10065;}
+
+tr:hover {background-color: #540035;}
 
 th, td {
     padding: 15px;

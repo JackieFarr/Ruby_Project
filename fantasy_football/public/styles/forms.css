@@ -9,3 +9,20 @@ select {
   font-family: sans-serif;
   display: block;
 }
+
+.new-player-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 2px solid white;
+  padding: 2rem;
+  background-color: #C71585;
+  font-size: 15px;
+  label{
+    display: block;
+    }
+  }
+input {
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px;
+}

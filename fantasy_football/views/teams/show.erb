@@ -4,7 +4,7 @@
 <div class="">
 
 
-<ul>
+<ul id="team-ul">
   <% for person in @team.players %>
 
     <a href="/players/<%= person.id %>"> <li class="list"> <%= person.pretty_name %></li></a>

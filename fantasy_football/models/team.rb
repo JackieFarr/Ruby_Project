@@ -28,10 +28,10 @@ class Team
   end
 
   def players
-    sql = "SELECT first_name, last_name FROM players
+    sql = "SELECT players.* FROM players
     INNER JOIN teams
     ON players.team_id = teams.id
-    WHERE team_id = $1"
+    WHERE players.team_id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)
     return results.map {|player| Player.new(player)}
@@ -41,7 +41,6 @@ class Team
     sql = "UPDATE teams
     SET name = $1
     WHERE id = $2"
-    # binding.pry
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end

@@ -1,17 +1,19 @@
 
 <h1>Team: <%= @team.name %></h1>
 
+<div class="">
+
 
 <ul>
-  <% for players in @team.players %>
+  <% for person in @team.players %>
 
-    <li class="list"> <%= players.pretty_name %></li>
-    <li class="list"> <%= players.position %></li>
+    <a href="/players/<%= person.id %>"> <li class="list"> <%= person.pretty_name %></li></a>
+
 <br>
 <br>
 <% end %>
 </ul>
-
+</div>
 
 <p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a></p>
 

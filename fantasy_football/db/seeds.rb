@@ -138,7 +138,6 @@ player8.save
 player9.save
 player10.save
 
-player1.first_name = "Bob"
-player1.update
 
-player2.delete
+# binding.pry
+# nil

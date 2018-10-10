@@ -9,7 +9,10 @@ body {
 .list {
   background-color: #ef7d3b;
   text-align: center;
-  display: grid;
+  margin-left: 480px;
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 ul {

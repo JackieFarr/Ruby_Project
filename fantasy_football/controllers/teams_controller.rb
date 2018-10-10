@@ -21,8 +21,8 @@ end
 get ('/teams/:id') do
   # @teams = Team.all
   @team = Team.find(params[:id].to_i)
-  @players = Player.all
-  @teams = Team.all
+  # @players = Player.all
+  # @teams = Team.all
   erb (:"teams/show")
 end
 

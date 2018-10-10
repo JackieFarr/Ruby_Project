@@ -1,13 +1,10 @@
 
 <h1>Team: <%= @team.name %></h1>
 
-<div class="">
-
-
-<ul id="team-ul">
+<ul class="team-players-ul">
   <% for person in @team.players %>
 
-    <a href="/players/<%= person.id %>"> <li class="list"> <%= person.pretty_name %></li></a>
+    <a href="/players/<%= person.id %>"> <li class="team-players-list"> <%= person.pretty_name %></li></a>
 
 <br>
 <br>

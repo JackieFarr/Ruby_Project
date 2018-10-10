@@ -27,3 +27,14 @@
   background-color: #C71585;
   font-size: 15px;
 }
+
+.btn--action_player {
+  border: 3px solid white;
+  background-color: #3c1e49;
+  font-size: 17px;
+}
+
+.btn--action_player:hover {
+  background-color: #A10065;
+  font-size: 17px;
+}

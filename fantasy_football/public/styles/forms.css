@@ -1,5 +1,16 @@
+
 input[type="submit"] {
   font-family: 'Cairo', sans-serif;
+  background-color: #3c1e49;
+  color: white;
+  font-size: 17px;
+  border: solid white;
+  padding: 15px;
+}
+
+input[type="submit"]:hover {
+background-color: #A10065;
+cursor: pointer;
 }
 
 select {
@@ -11,16 +22,62 @@ select {
 }
 
 .new-player-form {
+  color: white;
   max-width: 500px;
   margin: 2rem auto;
   border: 2px solid white;
   padding: 2rem;
   background-color: #C71585;
-  font-size: 15px;
-  label{
-    display: block;
-    }
+  font-size: 17px;
   }
+
+  .new-team-form {
+    color: white;
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 2px solid white;
+    padding: 2rem;
+    background-color: #C71585;
+    font-size: 17px;
+    }
+
+    input[class="team-button"] {
+      font-family: 'Cairo', sans-serif;
+      background-color: #3c1e49;
+      color: white;
+      font-size: 17px;
+      border: solid white;
+      width: 150px;
+      padding: 3px;
+      position: absolute;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .edit-team-form {
+      color: white;
+      max-width: 500px;
+      margin: 2rem auto;
+      border: 2px solid white;
+      padding: 2rem;
+      background-color: #C71585;
+      font-size: 17px;
+      }
+
+      .team-players-ul {
+        background: none;
+      }
+
+      .team-players-list {
+          color: white;
+          max-width: 500px;
+          margin: 2rem auto;
+          border: 2px solid white;
+          padding: 2rem;
+          background-color: #C71585;
+          font-size: 17px;
+          }
+
 input {
   border: 1px solid black;
   background-color: white;

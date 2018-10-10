@@ -1,13 +1,10 @@
 <br>
 <br>
 <br>
-<form action="/teams/<%= @team.id %>" method="post">
+<form class="edit-team-form" action="/teams/<%= @team.id %>" method="post">
 
   <label for="team-name-field">Team Name:</label>
   <input type="text" name="name" value="<%= @team.name %>">
 
-<br>
-<br>
-
-<input class="btn btn--action" type='submit' value="Update Team">
+<input class="team-button" type='submit' value="Update Team">
 </form>

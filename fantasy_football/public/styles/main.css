@@ -5,13 +5,17 @@ body {
 }
 
 .list {
-  background-color: #C71585;
+  background-color: white;
   text-align: center;
-  margin-left: 350px;
+  margin-left: 530px;
   font-size: 25px;
   padding-left: 5px;
   padding-right: 5px;
   color: white;
+}
+
+.list:hover {
+  background-color: #3c1e49;
 }
 
 #img-main {
@@ -27,7 +31,7 @@ body {
 }
 
 #team-ul {
-background-color: #7EB2DD;
+  background-color: #C71585;
 }
 
 ul {

@@ -17,6 +17,12 @@ ul {
     background-color: #3c1e49;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 li {
     float: left;
 }

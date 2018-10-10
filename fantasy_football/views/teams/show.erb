@@ -2,13 +2,16 @@
 <h1>Team: <%= @team.name %></h1>
 
 
-<ul class="hover-ul">
+<ul>
   <% for players in @team.players %>
 
-    <li> <%= players.pretty_name %> </li>
-
+    <li class="list"> <%= players.pretty_name %> </li>
+<br>
+<br>
 <% end %>
 </ul>
 
 
 <p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a></p>
+
+<p><a class="btn btn--action" href="/teams">Back to Teams</a></p>

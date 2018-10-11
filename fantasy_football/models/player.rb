@@ -16,6 +16,23 @@ class Player
     @goals = options["goals"]
   end
 
+  def position_order
+    case @position
+      when "Goalkeeper"
+        return 1
+      when "Defender"
+        return 2
+      when "Midfielder"
+        return 3
+      when "Forward"
+        return 4
+    end
+  end
+
+  def sort(players)
+    @players.sort
+  end
+
   def pretty_name
     return "#{@first_name} #{@last_name}"
   end

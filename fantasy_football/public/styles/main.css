@@ -1,5 +1,5 @@
 body {
-  background-image: url("/images/football2.jpg");
+  background-image: url("/images/ball.jpg");
   background-size: cover;
   font-family: 'Cairo', sans-serif;
 }
@@ -28,6 +28,11 @@ body {
   text-decoration: underline;
   font-weight: bold;
   text
+}
+
+.no-style {
+  background: none;
+  background-color: none;
 }
 
 #team-ul {
@@ -87,6 +92,7 @@ h1 {
   font-size: 50px;
   padding: 50px;
 }
+
 p {
   text-align: center;
   font-size: 30px;
@@ -100,5 +106,52 @@ p {
   padding: 1em;
   background-color: #C71585;
   text-align: center;
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-content: space-around;
+  min-height: 500px;
+  background-color: #DDD
+}
+
+.Goalkeeper {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify: center;
+  min-width: 50px;
+  min-height: 50px;
+  background: magenta;
+  color: white;
+}
+
+.Defender {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  min-width: 50px;
+  min-height: 50px;
+  background: blue;
+  color: white;
+
+}
+
+.Midfielder {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  min-width: 50px;
+  min-height: 50px;
+  background: green;
+  color: white;
+}
+
+.Forward {
+  grid-row-start: 4;
+  grid-row-end: 4;
+  min-width: 50px;
+  min-height: 50px;
+  background: orange;
   color: white;
 }

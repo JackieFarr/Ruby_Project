@@ -1,6 +1,7 @@
 body {
   background-image: url("/images/ball.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Cairo', sans-serif;
 }
 

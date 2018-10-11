@@ -29,9 +29,7 @@ class Player
     end
   end
 
-  def sort(players)
-    @players.sort
-  end
+
 
   def pretty_name
     return "#{@first_name} #{@last_name}"

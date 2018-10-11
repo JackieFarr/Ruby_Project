@@ -37,6 +37,14 @@ class Team
     return results.map {|player| Player.new(player)}
   end
 
+  def sort_players
+    players_array = players()
+    sorted_players = players_array.sort() do |player_a, player_b|
+      player_a.position_order() <=> player_b.position_order()
+    end
+    return sorted_players
+  end
+
   def update
     sql = "UPDATE teams
     SET name = $1

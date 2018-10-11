@@ -1,10 +1,13 @@
 
 <h1>Team: <%= @team.name %></h1>
 
+<p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a>
+  <a class="btn btn--action" href="/teams">Back to Teams</a></p>
+
 <div class="wrapper">
 
 <ul class="no-style">
-  <% for person in @team.players %>
+  <% for person in @team.sort_players %>
 
     <li> <div class="<%= person.position %>"><a href="/players/<%= person.id %>"><%= person.pretty_name %></div></li></a>
 
@@ -14,7 +17,3 @@
 <% end %>
 </ul>
 </div>
-
-<p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a></p>
-
-<p><a class="btn btn--action" href="/teams">Back to Teams</a></p>

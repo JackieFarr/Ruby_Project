@@ -1,10 +1,10 @@
 
-<h1>Team: <%= @team.name %></h1>
+<h2>Team: <%= @team.name %></h2>
 
 <p><a class="btn btn--action" href="/teams/<%= @team.id %>/edit">Edit Team Name</a>
   <a class="btn btn--action" href="/teams">Back to Teams</a></p>
 
-<div class="wrapper">
+<div id="grid">
 
 <ul class="no-style">
   <% for person in @team.sort_players %>

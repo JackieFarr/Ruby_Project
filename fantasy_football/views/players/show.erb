@@ -1,8 +1,8 @@
-
+<br>
+<br>
+<br>
 <form class="new-player-form">
-
-
-<h1>Name: <%= @player.pretty_name %></h1>
+<h2>Name: <%= @player.pretty_name %></h2>
 <p>Team: <%= @player.team.name %></p>
 <p>Position: <%= @player.position %></p>
 <p>Salary: £<%= @player.salary %> Million</p>
@@ -17,4 +17,8 @@
 <form class="btn btn--action_player" action="/players/<%= @player.id %>/delete" method="post">
   <input type="submit" value="Delete Player">
 </form>
+
 </form>
+<br>
+<br>
+<br>

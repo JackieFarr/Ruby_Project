@@ -43,7 +43,7 @@ end
 ## UPDATE.ERB - UPDATED PLAYER DETAILS REDIRECTS ##
 post ('/players/:id') do
   player = Player.new(params).update
-  redirect to ("/players")
+redirct to ("/players")
 end
 
 ## DELETE.ERB -  DELETE PLAYER ##

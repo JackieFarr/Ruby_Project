@@ -29,8 +29,6 @@ class Player
     end
   end
 
-
-
   def pretty_name
     return "#{@first_name} #{@last_name}"
   end
@@ -57,12 +55,6 @@ class Player
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i
   end
-
-  # def team_name
-  #   for id in @team_id
-  #     return @team_id.name
-  #   end
-  # end
 
   def self.all()
     sql = "SELECT * FROM players"
